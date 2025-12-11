@@ -430,7 +430,7 @@
     };
 
     // 题目（先放 8 题样例，你可以按同样格式继续往后加）
-    const questions = [
+       const questions = [
       {
         title: "在一群新朋友的聚会上，你更常见的状态是？",
         sub: "不用想太久，选一个最接近真实状态的你。",
@@ -510,9 +510,1051 @@
           { text: "白天比较自由，随时可以决定去哪里、做什么。", animals: ["horse", "butterfly", "fox"] },
           { text: "节奏不一定高效，但整体是轻松、舒服、不焦虑的。", animals: ["cat", "rabbit", "dolphin"] }
         ]
+      },
+      {
+        title: "面对一件全新的事情（新城市、新专业、新工作），你的第一反应更像？",
+        sub: "",
+        options: [
+          { text: "兴奋，先冲过去再说，边做边看。", animals: ["tiger", "horse", "butterfly"] },
+          { text: "冷静评估利弊，想清楚再决定要不要去。", animals: ["owl", "turtle", "beaver"] },
+          { text: "想先看看身边重要的人会怎么选择。", animals: ["wolf", "penguin", "golden"] },
+          { text: "既心动又犹豫，会担心很多细节。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "如果你在一个不太熟的群聊 / 社群里，你一般会？",
+        sub: "",
+        options: [
+          { text: "偶尔冒个泡，主要看看信息，不太说话。", animals: ["cat", "turtle", "deer"] },
+          { text: "积极参与，看到感兴趣的话题都会聊两句。", animals: ["golden", "fox", "butterfly"] },
+          { text: "只在有需要的时候发言，比如工作、通知之类。", animals: ["beaver", "owl", "wolf"] },
+          { text: "更喜欢小群聊，一大群人让我有点不自在。", animals: ["rabbit", "hedgehog", "penguin"] }
+        ]
+      },
+      {
+        title: "当你和人产生误会，你更常见的倾向是？",
+        sub: "",
+        options: [
+          { text: "主动约出来好好说清楚，别憋着。", animals: ["lion", "golden", "wolf"] },
+          { text: "先冷静一下，想好怎么表达再沟通。", animals: ["owl", "turtle", "dolphin"] },
+          { text: "会很在意对方是不是还在生气，但不太敢先开口。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "有时候选择顺其自然，觉得时间会冲淡一切。", animals: ["horse", "butterfly", "rabbit"] }
+        ]
+      },
+      {
+        title: "你对「计划」这件事的真实态度更接近？",
+        sub: "",
+        options: [
+          { text: "非常需要计划，没有安排会很不安。", animals: ["beaver", "owl", "turtle"] },
+          { text: "大方向会规划，但细节看当时的心情和状态。", animals: ["golden", "horse", "butterfly"] },
+          { text: "会尝试做计划，但经常被临时灵感或情绪打乱。", animals: ["cat", "fox", "rabbit"] },
+          { text: "不太做计划，觉得人生本来就很难按剧本走。", animals: ["tiger", "wolf", "deer"] }
+        ]
+      },
+      {
+        title: "在你熟悉的朋友圈 / 班级 / 小组里，你更像？",
+        sub: "",
+        options: [
+          { text: "比较像主心骨，大家有事会来找你商量。", animals: ["lion", "wolf", "golden"] },
+          { text: "氛围担当，很会活跃气氛、带动大家。", animals: ["fox", "butterfly", "tiger"] },
+          { text: "安静观察者，话不多但知道发生了什么。", animals: ["cat", "owl", "turtle"] },
+          { text: "情绪小棉袄，会记得谁最近状态不太好。", animals: ["dolphin", "penguin", "rabbit"] }
+        ]
+      },
+      {
+        title: "如果要和一个人长期合作，你最看重的是？",
+        sub: "",
+        options: [
+          { text: "对方靠谱、稳定，做事有始有终。", animals: ["beaver", "turtle", "owl"] },
+          { text: "对方愿意沟通，有问题可以摊开说。", animals: ["golden", "dolphin", "wolf"] },
+          { text: "彼此节奏合拍，不会总是有人催促或拖延。", animals: ["horse", "butterfly", "tiger"] },
+          { text: "相处舒服，不会让我觉得心很累。", animals: ["cat", "rabbit", "hedgehog"] }
+        ]
+      },
+      {
+        title: "当你要做一个比较重要的决定时，你最容易？",
+        sub: "",
+        options: [
+          { text: "列出利弊清单，反复权衡。", animals: ["owl", "turtle", "beaver"] },
+          { text: "先听听几个信任的人怎么想。", animals: ["dolphin", "golden", "wolf"] },
+          { text: "看当下的感觉和直觉，觉得对就去。", animals: ["horse", "butterfly", "tiger"] },
+          { text: "容易犹豫反复，担心做错会后悔。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "你对「社交」这件事真实的感觉是？",
+        sub: "",
+        options: [
+          { text: "喜欢，但更偏向熟人局和小范围聚会。", animals: ["cat", "penguin", "rabbit"] },
+          { text: "对我来说是回血，认识新朋友会很兴奋。", animals: ["golden", "fox", "butterfly"] },
+          { text: "可有可无，看当时的心情和状态。", animals: ["horse", "turtle", "deer"] },
+          { text: "社交之后通常会很累，需要独处充电。", animals: ["owl", "hedgehog", "dolphin"] }
+        ]
+      },
+      {
+        title: "别人更容易在哪一方面误解你？",
+        sub: "",
+        options: [
+          { text: "觉得我强势 / 不好惹，其实我也会顾虑很多。", animals: ["lion", "tiger", "wolf"] },
+          { text: "觉得我很好说话，其实我也有自己的底线。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "觉得我冷淡，其实我只是慢热又害羞。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "觉得我不靠谱，其实我只是讨厌被死板约束。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "当你感到委屈或受伤时，你更可能？",
+        sub: "",
+        options: [
+          { text: "当场爆发，直接表达不满。", animals: ["tiger", "lion", "wolf"] },
+          { text: "先自己消化，过一阵子再找机会说。", animals: ["owl", "turtle", "dolphin"] },
+          { text: "嘴上说没事，但心里会记很久。", animals: ["cat", "hedgehog", "deer"] },
+          { text: "倾向找一个信任的人倾诉，求安慰。", animals: ["golden", "rabbit", "penguin"] }
+        ]
+      },
+      {
+        title: "假如你突然有一整天完全空闲，你最可能？",
+        sub: "",
+        options: [
+          { text: "安排好要做的事，一点点完成，顺便收拾生活。", animals: ["beaver", "owl", "turtle"] },
+          { text: "约人出去玩 / 逛街 / 吃喝，充实这一天。", animals: ["golden", "fox", "butterfly"] },
+          { text: "独处躺平，看剧、打游戏、刷视频。", animals: ["cat", "rabbit", "hedgehog"] },
+          { text: "来一场小旅行或随机走走，看看会遇到什么。", animals: ["horse", "tiger", "deer"] }
+        ]
+      },
+      {
+        title: "在金钱和消费上，你更接近哪一种？",
+        sub: "",
+        options: [
+          { text: "会记账、存钱，尽量留一笔安全缓冲。", animals: ["beaver", "turtle", "owl"] },
+          { text: "该享受就享受，只要不超出自己承受范围就好。", animals: ["golden", "horse", "butterfly"] },
+          { text: "容易冲动消费，但事后又会反省。", animals: ["fox", "cat", "rabbit"] },
+          { text: "对钱比较随性，更多看整体体验而不是数字。", animals: ["tiger", "deer", "wolf"] }
+        ]
+      },
+      {
+        title: "面对一件重复又有点无聊但必须完成的事情，你会？",
+        sub: "",
+        options: [
+          { text: "硬着头皮稳稳做完，哪怕过程很枯燥。", animals: ["beaver", "turtle", "owl"] },
+          { text: "找点乐子，比如听歌、看视频配合着做。", animals: ["golden", "fox", "butterfly"] },
+          { text: "做一会儿休息一会儿，经常被别的事情打断。", animals: ["cat", "rabbit", "hedgehog"] },
+          { text: "能拖就拖，实在不行再一口气解决。", animals: ["tiger", "horse", "deer"] }
+        ]
+      },
+      {
+        title: "别人评价你「很像大人 / 很像小孩」，你更常被说？",
+        sub: "",
+        options: [
+          { text: "更像大人：成熟、稳重、比较有责任感。", animals: ["lion", "beaver", "owl"] },
+          { text: "更像小孩：真诚直接、情绪写在脸上。", animals: ["golden", "rabbit", "butterfly"] },
+          { text: "看场合，有时像大人、有时像小孩。", animals: ["dolphin", "horse", "fox"] },
+          { text: "其实谁也不像，只是安静地做自己。", animals: ["cat", "turtle", "hedgehog"] }
+        ]
+      },
+      {
+        title: "如果要给「安全感」下一个你自己的定义，你更在意？",
+        sub: "",
+        options: [
+          { text: "生活有一定规律和可预期，不会突然天翻地覆。", animals: ["turtle", "beaver", "penguin"] },
+          { text: "有人真正懂我、不随便消失。", animals: ["cat", "dolphin", "rabbit"] },
+          { text: "我有能力随时改变现状，不被困在一个地方。", animals: ["horse", "tiger", "butterfly"] },
+          { text: "遇到问题时，有人可以一起商量和扛。", animals: ["lion", "wolf", "golden"] }
+        ]
+      },
+      {
+        title: "你更容易在哪些时刻对自己感到不满意？",
+        sub: "",
+        options: [
+          { text: "拖延、懒散、没有把该做的事做好。", animals: ["beaver", "owl", "tiger"] },
+          { text: "太在意别人想法，不够做自己。", animals: ["cat", "deer", "penguin"] },
+          { text: "情绪太冲，讲话太直接伤到人。", animals: ["lion", "wolf", "tiger"] },
+          { text: "太随波逐流，总是让自己处在「还可以」但不满意的状态。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "如果现在让你为「未来三年」选一个主旋律，你更想要？",
+        sub: "",
+        options: [
+          { text: "稳扎稳打，把基础打牢。", animals: ["beaver", "turtle", "owl"] },
+          { text: "多尝试、多体验，看看还有哪些可能。", animals: ["horse", "butterfly", "fox"] },
+          { text: "修复关系、照顾好自己和重要的人。", animals: ["dolphin", "golden", "penguin"] },
+          { text: "梳理内心，找回那个真正想要什么的自己。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "学习一门全新的技能（比如乐器 / 编程 / 摄影），你最常用的方式是？",
+        sub: "",
+        options: [
+          { text: "先把教程、书、课程搜集好，系统性地一步步学。", animals: ["owl", "beaver", "turtle"] },
+          { text: "快速上手，边摸索边做，遇到不会的再查。", animals: ["tiger", "horse", "butterfly"] },
+          { text: "找已经很厉害的朋友请教或报课，跟着人学。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "先观察一阵，看自己到底喜不喜欢，再决定要不要投入。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "关于「早起」这件事，你更接近哪种状态？",
+        sub: "",
+        options: [
+          { text: "能早就早，喜欢从容的早晨，有自己的固定仪式感。", animals: ["turtle", "beaver", "owl"] },
+          { text: "看安排，如果有重要的事就能立刻起床。", animals: ["lion", "wolf", "golden"] },
+          { text: "经常赖床，早起对我来说像跨越一道山。", animals: ["cat", "rabbit", "deer"] },
+          { text: "作息比较自由，今天早起、明天熬夜也无所谓。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "和家人相处时，你更多是？",
+        sub: "",
+        options: [
+          { text: "负责照顾、操心型，会主动帮忙安排各种事情。", animals: ["lion", "beaver", "penguin"] },
+          { text: "气氛担当型，喜欢逗家人开心，缓和紧张。", animals: ["golden", "fox", "butterfly"] },
+          { text: "安静陪伴型，存在感不算强，但该出现的时候会在。", animals: ["cat", "turtle", "deer"] },
+          { text: "有点距离感，爱在心里但不太会表达。", animals: ["wolf", "hedgehog", "owl"] }
+        ]
+      },
+      {
+        title: "在小组作业 / 项目合作中，你通常会？",
+        sub: "",
+        options: [
+          { text: "自然地承担起分工、时间线、对接的那个人。", animals: ["lion", "beaver", "wolf"] },
+          { text: "负责创意、想法和展示部分，比较擅长表达。", animals: ["fox", "golden", "butterfly"] },
+          { text: "默默完成自己的那一份，可靠但不太抢镜。", animals: ["turtle", "penguin", "owl"] },
+          { text: "看队友状态，如果大家都摆烂，我也很难认真起来。", animals: ["cat", "horse", "tiger"] }
+        ]
+      },
+      {
+        title: "遇到一个明显比你厉害很多的人，你真实的第一反应更像？",
+        sub: "",
+        options: [
+          { text: "很佩服，会认真观察对方是怎么做到的。", animals: ["owl", "beaver", "cat"] },
+          { text: "有点不服气，会悄悄激起「我也要变强」的斗志。", animals: ["tiger", "lion", "wolf"] },
+          { text: "羡慕，但会觉得那是 Ta 的人生，我走好自己的就行。", animals: ["turtle", "deer", "penguin"] },
+          { text: "既佩服又想靠近一点，看看能不能和 Ta 成为朋友。", animals: ["golden", "dolphin", "butterfly"] }
+        ]
+      },
+      {
+        title: "当别人真诚地夸你，你最常见的反应是？",
+        sub: "",
+        options: [
+          { text: "下意识地自嘲和否认：「哪有啦」「真的没有」。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "开心接受，并顺便夸回去对方。", animals: ["golden", "dolphin", "fox"] },
+          { text: "表面淡定，内心记很久，会当作前进的动力。", animals: ["owl", "beaver", "penguin"] },
+          { text: "有点不适应，会怀疑对方是不是在客套。", animals: ["wolf", "tiger", "turtle"] }
+        ]
+      },
+      {
+        title: "去一家没吃过的新餐厅，你点菜的方式更像？",
+        sub: "",
+        options: [
+          { text: "认真刷评价、看图、比对推荐，再做决定。", animals: ["owl", "beaver", "turtle"] },
+          { text: "看到什么顺眼、当下想吃什么就点什么。", animals: ["horse", "butterfly", "fox"] },
+          { text: "基本跟朋友点什么我就点什么，选错了会有点懊恼。", animals: ["cat", "rabbit", "deer"] },
+          { text: "直接问服务员招牌 / 推荐，勇敢尝试新口味。", animals: ["golden", "tiger", "lion"] }
+        ]
+      },
+      {
+        title: "你是怎么对待「短期目标和长期目标」的？",
+        sub: "",
+        options: [
+          { text: "会把长期目标拆成阶段规划，制定比较细的路线。", animals: ["owl", "beaver", "turtle"] },
+          { text: "有个大概的图景，但更多看眼下机会，一边走一边调。", animals: ["horse", "butterfly", "fox"] },
+          { text: "短期目标不少，但经常被情绪和生活打断。", animals: ["cat", "rabbit", "deer"] },
+          { text: "更专注于把当下的每一步做好，长远的顺其自然。", animals: ["golden", "dolphin", "penguin"] }
+        ]
+      },
+      {
+        title: "在网上看到不公 / 不合理的事情时，你会？",
+        sub: "",
+        options: [
+          { text: "如果影响到我或身边人，会认真发声、维权。", animals: ["wolf", "lion", "tiger"] },
+          { text: "理性分析来龙去脉，再决定要不要评论。", animals: ["owl", "turtle", "beaver"] },
+          { text: "会难过或生气一阵，但更多是在心里消化。", animals: ["cat", "deer", "rabbit"] },
+          { text: "转发给朋友讨论一下，顺便互相安慰和吐槽。", animals: ["golden", "dolphin", "fox"] }
+        ]
+      },
+      {
+        title: "对「时间观念」这件事，你真实的样子更接近？",
+        sub: "",
+        options: [
+          { text: "尽量准时甚至提前到，迟到会非常不安。", animals: ["turtle", "beaver", "penguin"] },
+          { text: "重要场合绝对不会迟到，普通约就看交通和运气。", animals: ["lion", "wolf", "owl"] },
+          { text: "经常踩点，心里默默给自己留一点机动时间。", animals: ["golden", "fox", "horse"] },
+          { text: "总想准时，但现实里常常不小心拖到最后一刻。", animals: ["cat", "rabbit", "butterfly"] }
+        ]
+      },
+      {
+        title: "情绪低落的时候，你心里最常出现的自我对话是？",
+        sub: "",
+        options: [
+          { text: "「先搞清楚到底发生了什么，下一步怎么调整。」", animals: ["owl", "beaver", "turtle"] },
+          { text: "「没关系，我已经很努力了，允许自己难过一下。」", animals: ["dolphin", "golden", "penguin"] },
+          { text: "「是不是我又哪里不够好？」", animals: ["cat", "deer", "rabbit"] },
+          { text: "「出去走走 / 找人聊聊，别把自己关在这里。」", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "在照顾身体和健康这件事上，你更像？",
+        sub: "",
+        options: [
+          { text: "会看体检报告、研究饮食和运动规划。", animals: ["owl", "beaver", "turtle"] },
+          { text: "知道要养生，但大部分时候还在「明天开始」。", animals: ["cat", "rabbit", "deer"] },
+          { text: "用运动、户外活动当主要的减压方式。", animals: ["horse", "tiger", "butterfly"] },
+          { text: "更在意情绪健康，身体不舒服也会先看心是不是累了。", animals: ["dolphin", "golden", "penguin"] }
+        ]
+      },
+      {
+        title: "面对「搬家 / 换城市 / 换工作」这种大变化时，你会？",
+        sub: "",
+        options: [
+          { text: "提前很久开始查资料、做预算、做最坏打算。", animals: ["owl", "turtle", "beaver"] },
+          { text: "紧张又兴奋，觉得这是一次重启人生的机会。", animals: ["horse", "butterfly", "tiger"] },
+          { text: "首要考虑的是家人 / 伴侣 / 宠物会不会适应。", animals: ["penguin", "golden", "dolphin"] },
+          { text: "会犹豫很久，担心自己难以融入新的环境。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "在工作 / 学习中，你最看重哪一类「回报」？",
+        sub: "",
+        options: [
+          { text: "实实在在的成果：成绩、作品、数据、薪水。", animals: ["beaver", "tiger", "lion"] },
+          { text: "成长感：感觉自己比以前更成熟、更有本事。", animals: ["owl", "horse", "butterfly"] },
+          { text: "被需要感：有人因为我变得轻松了一点。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "认可感：被看到、被理解，知道自己做得还不错。", animals: ["cat", "rabbit", "deer"] }
+        ]
+      },
+      {
+        title: "你发朋友圈 / 动态 / 笔记的习惯更接近？",
+        sub: "",
+        options: [
+          { text: "偶尔发，但会修图、写文案，属于精挑细选型。", animals: ["owl", "butterfly", "fox"] },
+          { text: "想到就发，生活点滴都可以是记录素材。", animals: ["golden", "horse", "tiger"] },
+          { text: "几乎不发，只看别人，觉得隐私感更重要。", animals: ["cat", "turtle", "deer"] },
+          { text: "会在特定分组 / 小号里，给少数人看真实状态。", animals: ["hedgehog", "rabbit", "penguin"] }
+        ]
+      },
+      {
+        title: "当你决定要「放弃」一件事或一段关系时，你一般会？",
+        sub: "",
+        options: [
+          { text: "先评估很久，确认自己真的尽力了才放手。", animals: ["owl", "beaver", "turtle"] },
+          { text: "一旦下定决心，会非常干脆地离开。", animals: ["tiger", "wolf", "lion"] },
+          { text: "嘴上说放弃，心里还会留着一点希望。", animals: ["cat", "rabbit", "deer"] },
+          { text: "尽量把话说清楚，给彼此一个相对温和的结尾。", animals: ["dolphin", "golden", "penguin"] }
+        ]
+      },
+      {
+        title: "关于「独处」这件事，你真实的需求是？",
+        sub: "",
+        options: [
+          { text: "必须有大段独处时间，不然会觉得被世界淹没。", animals: ["cat", "owl", "turtle"] },
+          { text: "喜欢独处，也喜欢和人相处，需要在两者之间切换。", animals: ["horse", "butterfly", "fox"] },
+          { text: "独处时间不多也没关系，只要身边是可信的人就好。", animals: ["golden", "penguin", "dolphin"] },
+          { text: "太长时间独处会焦虑，会开始怀疑是不是被遗忘。", animals: ["rabbit", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "你对「规则 / 制度」的态度更偏向？",
+        sub: "",
+        options: [
+          { text: "只要合理，就会认真遵守，觉得它能保护大家。", animals: ["turtle", "beaver", "penguin"] },
+          { text: "理解规则存在的意义，但必要时会灵活变通。", animals: ["owl", "lion", "golden"] },
+          { text: "对僵硬的规则比较反感，容易产生逆反心理。", animals: ["tiger", "horse", "fox"] },
+          { text: "取决于是否伤害到人，如果不公平就很难接受。", animals: ["wolf", "dolphin", "cat"] }
+        ]
+      },
+      {
+        title: "遇到突发状况（比如行程被打乱 / 临时变卦），你会？",
+        sub: "",
+        options: [
+          { text: "迅速评估风险，重新排计划或找替代方案。", animals: ["owl", "beaver", "lion"] },
+          { text: "先情绪崩一会，然后慢慢接受现实。", animals: ["cat", "rabbit", "deer"] },
+          { text: "觉得刺激，还挺享受这种随机性。", animals: ["horse", "butterfly", "fox"] },
+          { text: "关注每个人有没有被照顾到，尽量安抚身边人。", animals: ["golden", "dolphin", "penguin"] }
+        ]
+      },
+      {
+        title: "你怎么看待「失败」？",
+        sub: "",
+        options: [
+          { text: "它是过程的一部分，重要的是从里面学到什么。", animals: ["owl", "beaver", "horse"] },
+          { text: "很难受，但会逼自己尽快站起来继续走。", animals: ["tiger", "lion", "wolf"] },
+          { text: "会反思很久，顺便怀疑自己是不是不够好。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "需要有人陪我一起消化，觉得被理解比道理更重要。", animals: ["dolphin", "golden", "rabbit"] }
+        ]
+      },
+      {
+        title: "你对「成长 / 自我提升」的动力主要来自？",
+        sub: "",
+        options: [
+          { text: "想让自己在专业 / 能力上更强，拥有更多选择权。", animals: ["owl", "beaver", "tiger"] },
+          { text: "想给家人 / 伴侣 / 未来的小家更好的生活。", animals: ["penguin", "golden", "lion"] },
+          { text: "想遇到更有趣的人，去更远的地方。", animals: ["horse", "butterfly", "fox"] },
+          { text: "想和过去受伤的自己和解，活得更自在一点。", animals: ["cat", "dolphin", "deer"] }
+        ]
+      },
+      {
+        title: "出去旅行时，你更喜欢哪种状态？",
+        sub: "",
+        options: [
+          { text: "行程安排得比较详细，重点景点和时间都规划好。", animals: ["beaver", "owl", "penguin"] },
+          { text: "有几个想去的地方，其他都随缘，看当天心情。", animals: ["horse", "butterfly", "fox"] },
+          { text: "不太想跑景点，更喜欢慢慢逛、体验日常。", animals: ["cat", "turtle", "dolphin"] },
+          { text: "关键是和谁去，去哪反而没那么重要。", animals: ["golden", "rabbit", "deer"] }
+        ]
+      },
+      {
+        title: "在一段长期关系里（朋友或伴侣），当最初的新鲜感下降时，你会？",
+        sub: "",
+        options: [
+          { text: "主动创造新的共同体验，让关系持续更新。", animals: ["golden", "butterfly", "horse"] },
+          { text: "把它当成一种稳定期，更多关注对方是否安稳。", animals: ["penguin", "turtle", "dolphin"] },
+          { text: "会怀疑是不是没那么合适了，容易想很多。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "拿出来聊一聊，试着诚实表达彼此的期待。", animals: ["owl", "lion", "wolf"] }
+        ]
+      },
+      {
+        title: "总体来说，你对「未来的不确定性」是什么感觉？",
+        sub: "",
+        options: [
+          { text: "想把能掌控的部分尽量掌控好，再接受不确定。", animals: ["owl", "beaver", "turtle"] },
+          { text: "既害怕又期待，觉得那是人生的趣味所在。", animals: ["horse", "butterfly", "fox"] },
+          { text: "只希望身边重要的人平安健康，其他都可以慢慢来。", animals: ["golden", "penguin", "dolphin"] },
+          { text: "有时会被未来压得喘不过气，需要不断安抚自己。", animals: ["cat", "rabbit", "deer"] }
+        ]
+      },
+      {
+        title: "面对一份需要你「主动表现自己」的机会（比如竞选 / 面试 / 上台），你更多是？",
+        sub: "",
+        options: [
+          { text: "认真准备，做到心里有底再上场。", animals: ["owl", "beaver", "turtle"] },
+          { text: "紧张，但还是会硬着头皮冲一把。", animals: ["tiger", "lion", "wolf"] },
+          { text: "能推就推，更喜欢幕后而不是聚光灯。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "看重的是体验，发挥得好不好倒是其次。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "你在聊天软件里的习惯更接近？",
+        sub: "",
+        options: [
+          { text: "回消息比较快，会尽量不让会话红点堆太多。", animals: ["golden", "penguin", "beaver"] },
+          { text: "看心情，有时间就秒回，忙的时候直接消失。", animals: ["tiger", "horse", "fox"] },
+          { text: "习惯攒着一起回，有时会忘记回复。", animals: ["cat", "turtle", "deer"] },
+          { text: "对于重要的人会尽量秒回，其他人就随缘。", animals: ["dolphin", "owl", "hedgehog"] }
+        ]
+      },
+      {
+        title: "在「表达不满」这件事上，你更常见的模式是？",
+        sub: "",
+        options: [
+          { text: "直接说出来，但会尽量用不伤人的方式。", animals: ["lion", "dolphin", "owl"] },
+          { text: "先憋着，等实在忍不住才一次性说开。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "用开玩笑 / 打岔的方式，让对方感受到但不太尴尬。", animals: ["fox", "golden", "butterfly"] },
+          { text: "通常会选择算了，只默默在心里做减分。", animals: ["turtle", "penguin", "rabbit"] }
+        ]
+      },
+      {
+        title: "当别人需要你帮忙，但你其实很忙时，你会？",
+        sub: "",
+        options: [
+          { text: "硬撑着也想帮完，对拒绝别人这件事很不擅长。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "会说明自己时间有限，尽量把能做的部分说清楚。", animals: ["owl", "beaver", "penguin"] },
+          { text: "看关系，亲近的人会优先，其他人就婉拒。", animals: ["cat", "hedgehog", "wolf"] },
+          { text: "不太愿意勉强自己，会比较直接地拒绝。", animals: ["tiger", "lion", "horse"] }
+        ]
+      },
+      {
+        title: "你更喜欢被哪一种方式安慰？",
+        sub: "",
+        options: [
+          { text: "给我具体的建议和方案，陪我一起想下一步。", animals: ["owl", "beaver", "lion"] },
+          { text: "什么都不用说，只要陪我、抱抱我就好。", animals: ["dolphin", "golden", "rabbit"] },
+          { text: "先听完我的故事，再帮我换个角度看。", animals: ["fox", "penguin", "horse"] },
+          { text: "先让我一个人躺一会儿，等我想好再说。", animals: ["cat", "turtle", "hedgehog"] }
+        ]
+      },
+      {
+        title: "在团队或集体中，你对「权威人物」的态度更像？",
+        sub: "",
+        options: [
+          { text: "尊重但会评估，如果判断不合理会提出不同意见。", animals: ["owl", "wolf", "lion"] },
+          { text: "只要对方靠谱，我愿意跟着安排走。", animals: ["beaver", "penguin", "golden"] },
+          { text: "表面顺从，内心有自己的判断和小吐槽。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "更喜欢平等沟通的氛围，对强压式管理特别反感。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "当你需要做自我介绍 / 简历 / 个人主页时，你会？",
+        sub: "",
+        options: [
+          { text: "认真打磨内容和排版，像做一个小作品。", animals: ["beaver", "owl", "butterfly"] },
+          { text: "写关键点就好，不太会包装自己。", animals: ["turtle", "penguin", "deer"] },
+          { text: "会突出一些有趣的点，让别人一眼记住我。", animals: ["fox", "golden", "tiger"] },
+          { text: "总觉得很难写，会反复删改，最后随便交上去。", animals: ["cat", "rabbit", "hedgehog"] }
+        ]
+      },
+      {
+        title: "如果你做了一件有点「与众不同」的选择，你更希望身边人？",
+        sub: "",
+        options: [
+          { text: "理性讨论利弊，帮我看有没有没考虑到的地方。", animals: ["owl", "beaver", "penguin"] },
+          { text: "先支持我，再慢慢聊细节和风险。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "尊重就好，不要过多干涉。", animals: ["horse", "tiger", "wolf"] },
+          { text: "可以不认同，但不要用「你怎么会这样」的语气。", animals: ["cat", "deer", "hedgehog"] }
+        ]
+      },
+      {
+        title: "你更常在哪一类场景里感到「兴奋 / 有能量」？",
+        sub: "",
+        options: [
+          { text: "解决问题、攻克难题、搞定一个棘手的任务。", animals: ["beaver", "tiger", "lion"] },
+          { text: "灵感爆棚，突然想到一个很好玩的点子。", animals: ["butterfly", "fox", "horse"] },
+          { text: "和喜欢的人一起待着，氛围刚刚好。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "在安静的空间里，沉浸在自己感兴趣的世界。", animals: ["cat", "owl", "turtle"] }
+        ]
+      },
+      {
+        title: "面对「别人向你道歉」，哪一种方式最能打动你？",
+        sub: "",
+        options: [
+          { text: "清楚地承认自己哪里做错，并愿意做出改变。", animals: ["owl", "lion", "wolf"] },
+          { text: "真心实意，情绪到位，比说什么内容更重要。", animals: ["dolphin", "golden", "rabbit"] },
+          { text: "给我一点时间，不要逼我马上说没事。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "用行动来弥补，比如兑现承诺 / 主动承担责任。", animals: ["beaver", "tiger", "penguin"] }
+        ]
+      },
+      {
+        title: "如果你发现自己被人误解，而且对方还在传播这个版本，你会？",
+        sub: "",
+        options: [
+          { text: "找合适的机会和对方正面聊清楚。", animals: ["lion", "wolf", "owl"] },
+          { text: "和真正重要的人说明，其他人就随他们去。", animals: ["cat", "turtle", "dolphin"] },
+          { text: "很受伤，会反复想哪里做错了，难以释怀。", animals: ["deer", "rabbit", "hedgehog"] },
+          { text: "用行动和时间证明自己，懒得解释太多。", animals: ["tiger", "horse", "penguin"] }
+        ]
+      },
+      {
+        title: "当你在做一件事时，被频繁打断，你会？",
+        sub: "",
+        options: [
+          { text: "非常烦躁，会明显表现出不耐烦。", animals: ["tiger", "lion", "wolf"] },
+          { text: "有点影响，但会尽量保持礼貌和耐心。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "直接切换到陪别人，等结束再回去继续。", animals: ["fox", "horse", "beaver"] },
+          { text: "默默把不爽吞下去，之后自己找时间排解。", animals: ["cat", "deer", "turtle"] }
+        ]
+      },
+      {
+        title: "在创意 / 灵感相关的事情上，你更像？",
+        sub: "",
+        options: [
+          { text: "灵感很多，但需要有人帮我落地和收尾。", animals: ["butterfly", "fox", "horse"] },
+          { text: "点子不一定多，但一旦决定做，就会认真做到好。", animals: ["beaver", "owl", "turtle"] },
+          { text: "更擅长看别人作品里的细节和情绪，而不是创作本身。", animals: ["cat", "deer", "dolphin"] },
+          { text: "喜欢和别人脑暴，在互动中碰撞出想法。", animals: ["golden", "tiger", "penguin"] }
+        ]
+      },
+      {
+        title: "当你觉得「某件事不公平」时，你的反应更像？",
+        sub: "",
+        options: [
+          { text: "站出来说话，哪怕现场有点尴尬。", animals: ["wolf", "lion", "tiger"] },
+          { text: "先私下了解情况，再决定怎么处理。", animals: ["owl", "beaver", "turtle"] },
+          { text: "会和身边信任的人吐槽，但不一定公开表达。", animals: ["cat", "deer", "rabbit"] },
+          { text: "更在意受影响的人是否被安慰到。", animals: ["dolphin", "golden", "penguin"] }
+        ]
+      },
+      {
+        title: "你对「惊喜」的真实态度更接近？",
+        sub: "",
+        options: [
+          { text: "喜欢被惊喜，但前提是对方很了解我。", animals: ["cat", "rabbit", "dolphin"] },
+          { text: "完全热爱惊喜，越突然越开心。", animals: ["golden", "butterfly", "horse"] },
+          { text: "勉强可以，最好先给个模糊预告，不要太失控。", animals: ["turtle", "penguin", "deer"] },
+          { text: "不太爱惊喜，更喜欢可控和提前知情。", animals: ["owl", "beaver", "wolf"] }
+        ]
+      },
+      {
+        title: "当你在一个新环境里还不熟时，你更可能？",
+        sub: "",
+        options: [
+          { text: "先观察一阵，了解规则和氛围再投入。", animals: ["cat", "owl", "turtle"] },
+          { text: "主动打招呼，快速建立几个熟悉的面孔。", animals: ["golden", "fox", "butterfly"] },
+          { text: "找到一个角落安静待着，等别人慢慢靠近我。", animals: ["deer", "rabbit", "hedgehog"] },
+          { text: "自然融入，哪里需要人我就往哪里靠。", animals: ["tiger", "horse", "penguin"] }
+        ]
+      },
+      {
+        title: "别人向你倾诉时，如果你其实也状态很差，你通常会？",
+        sub: "",
+        options: [
+          { text: "还是会先照顾对方，自己的情绪先放一边。", animals: ["dolphin", "golden", "penguin"] },
+          { text: "坦白说自己也不太好，看看能不能互相安慰。", animals: ["cat", "rabbit", "horse"] },
+          { text: "简单安慰几句，委婉结束话题，去整理自己。", animals: ["owl", "turtle", "beaver"] },
+          { text: "会有点不耐烦，甚至想暂时远离所有对话。", animals: ["tiger", "wolf", "hedgehog"] }
+        ]
+      },
+      {
+        title: "你更愿意在哪一种团队中长期待着？",
+        sub: "",
+        options: [
+          { text: "目标明确、效率高、每个人都靠谱的团队。", animals: ["beaver", "tiger", "lion"] },
+          { text: "氛围轻松、彼此真诚、可以开玩笑的团队。", animals: ["golden", "fox", "butterfly"] },
+          { text: "节奏适中、稳定可预期、不内耗的团队。", animals: ["turtle", "penguin", "owl"] },
+          { text: "有包容度、有弹性、允许大家不一样的团队。", animals: ["cat", "dolphin", "deer"] }
+        ]
+      },
+      {
+        title: "当你被别人夸「很善良」时，你内心第一想法更像？",
+        sub: "",
+        options: [
+          { text: "有点害羞，但也会觉得被看见，很温暖。", animals: ["rabbit", "dolphin", "deer"] },
+          { text: "善良是底线，但我更希望被看见其他能力。", animals: ["lion", "tiger", "beaver"] },
+          { text: "会担心是不是太好说话，容易被人利用。", animals: ["cat", "hedgehog", "turtle"] },
+          { text: "说明我身边的人也很温柔，才会注意到这一点。", animals: ["golden", "penguin", "fox"] }
+        ]
+      },
+      {
+        title: "在做选择时，你更常受到哪一类声音影响？",
+        sub: "",
+        options: [
+          { text: "理性分析和现实条件，比如钱、时间、风险。", animals: ["owl", "beaver", "turtle"] },
+          { text: "内心的感觉：我到底开不开心、舒不舒服。", animals: ["cat", "dolphin", "rabbit"] },
+          { text: "身边重要的人会不会支持、怎么看。", animals: ["golden", "penguin", "wolf"] },
+          { text: "未来的自己回头看，会不会觉得值得。", animals: ["horse", "butterfly", "tiger"] }
+        ]
+      },
+      {
+        title: "你对「把情绪说出来」这件事的真实难度是？",
+        sub: "",
+        options: [
+          { text: "比较习惯，有情绪就会找信任的人聊。", animals: ["golden", "dolphin", "fox"] },
+          { text: "要很熟很熟才会说，大多数时候自己消化。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "更习惯写下来，比如日记、备忘录、社交平台。", animals: ["owl", "butterfly", "penguin"] },
+          { text: "情绪一来就会直接表现出来，很难完全藏住。", animals: ["tiger", "lion", "rabbit"] }
+        ]
+      },
+      {
+        title: "如果用一句话形容你理想的生活节奏，你更接近？",
+        sub: "",
+        options: [
+          { text: "不慌不忙，稳稳向前，有条不紊。", animals: ["turtle", "beaver", "owl"] },
+          { text: "能随时出发，也能随时躺平，松弛又有一点野心。", animals: ["horse", "butterfly", "fox"] },
+          { text: "身边有几个很重要的人，再忙也不会丢掉彼此。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "哪怕过程起伏大一点，也想活得更真实、更像自己。", animals: ["cat", "tiger", "deer"] }
+        ]
+      },
+      {
+        title: "当你累到不想说话时，你更希望身边的人怎么做？",
+        sub: "",
+        options: [
+          { text: "什么都不问，静静陪在旁边。", animals: ["cat", "turtle", "deer"] },
+          { text: "主动抱抱我，给一点温度再说话。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "轻轻引导我，把情绪说出来。", animals: ["fox", "owl", "penguin"] },
+          { text: "让我一个人休息，等我有力气了再交流。", animals: ["wolf", "tiger", "hedgehog"] }
+        ]
+      },
+      {
+        title: "当你觉得自己被忽略时，你最可能的反应是？",
+        sub: "",
+        options: [
+          { text: "装作没关系，心里悄悄难过。", animals: ["deer", "cat", "hedgehog"] },
+          { text: "试着主动靠近对方，看是不是误会。", animals: ["dolphin", "golden", "penguin"] },
+          { text: "直接表达出来，希望关系变得清晰。", animals: ["lion", "tiger", "wolf"] },
+          { text: "慢慢抽离，把注意力转回自己身上。", animals: ["owl", "turtle", "fox"] }
+        ]
+      },
+      {
+        title: "当你做了一件让自己骄傲的事，你更希望别人如何反应？",
+        sub: "",
+        options: [
+          { text: "认真夸我，让我感到被看见。", animals: ["golden", "rabbit", "penguin"] },
+          { text: "轻轻带过，理解我的快乐就够了。", animals: ["cat", "deer", "turtle"] },
+          { text: "问我怎么做到的，愿意听我分享细节。", animals: ["beaver", "owl", "dolphin"] },
+          { text: "一起大声庆祝，不隐藏兴奋。", animals: ["horse", "butterfly", "tiger"] }
+        ]
+      },
+      {
+        title: "当你心里出现负面情绪时，你通常怎么让自己恢复？",
+        sub: "",
+        options: [
+          { text: "和最亲近的人聊聊，让情绪流动出去。", animals: ["dolphin", "golden", "fox"] },
+          { text: "写下来、听歌、散步，用自己的方式释放。", animals: ["owl", "cat", "turtle"] },
+          { text: "寻找理性的解释，让心回到平静。", animals: ["beaver", "penguin", "wolf"] },
+          { text: "暂时逃离情绪源头，等自己自然回升。", animals: ["deer", "hedgehog", "rabbit"] }
+        ]
+      },
+      {
+        title: "你面对突然的变化时，更常见的反应是？",
+        sub: "",
+        options: [
+          { text: "迅速调整计划，尽快恢复掌控感。", animals: ["beaver", "owl", "lion"] },
+          { text: "先观望情况，再慢慢决定下一步。", animals: ["turtle", "deer", "hedgehog"] },
+          { text: "有点兴奋，把变化视为新机会。", animals: ["butterfly", "horse", "fox"] },
+          { text: "心里不舒服，但表面会让自己冷静。", animals: ["cat", "penguin", "rabbit"] }
+        ]
+      },
+      {
+        title: "当你听到别人对你的评价时，你最在意哪一类？",
+        sub: "",
+        options: [
+          { text: "是否真实、客观，对我来说有没有参考价值。", animals: ["owl", "beaver", "penguin"] },
+          { text: "是否温柔、善意，不带攻击性。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "是否来自我在意的人。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "是否凸显了我独特的一面。", animals: ["fox", "horse", "tiger"] }
+        ]
+      },
+      {
+        title: "当你需要放松时，你最常选择哪种方式？",
+        sub: "",
+        options: [
+          { text: "安静独处，比如看书、听歌、发呆。", animals: ["cat", "owl", "turtle"] },
+          { text: "和喜欢的人依偎在一起。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "做一些轻松又愉快的活动。", animals: ["butterfly", "fox", "horse"] },
+          { text: "把杂事一次性处理掉，再安心休息。", animals: ["beaver", "penguin", "lion"] }
+        ]
+      },
+      {
+        title: "在你看来，一段关系最重要的东西是什么？",
+        sub: "",
+        options: [
+          { text: "信任和稳定感。", animals: ["golden", "penguin", "owl"] },
+          { text: "陪伴和情绪回应。", animals: ["dolphin", "rabbit", "deer"] },
+          { text: "彼此的理解与尊重。", animals: ["cat", "turtle", "hedgehog"] },
+          { text: "能一起成长和探索新事物。", animals: ["horse", "butterfly", "fox"] }
+        ]
+      },
+      {
+        title: "当别人质疑你的能力时，你的第一反应更像？",
+        sub: "",
+        options: [
+          { text: "冷静解释，用事实证明自己。", animals: ["owl", "beaver", "penguin"] },
+          { text: "受伤但不说出口。", animals: ["cat", "rabbit", "deer"] },
+          { text: "变得更有动力，想让对方刮目相看。", animals: ["tiger", "lion", "horse"] },
+          { text: "心里嫌麻烦，懒得争论。", animals: ["fox", "hedgehog", "turtle"] }
+        ]
+      },
+      {
+        title: "如果你正在生气，别人最不该做的事情是？",
+        sub: "",
+        options: [
+          { text: "无视我的情绪当作没事。", animals: ["lion", "tiger", "wolf"] },
+          { text: "一直逼我马上讲原因。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "用大道理教育我。", animals: ["penguin", "owl", "beaver"] },
+          { text: "表现得太过热情，让我更烦躁。", animals: ["rabbit", "butterfly", "horse"] }
+        ]
+      },
+      {
+        title: "你在表达爱意时，更常用哪一种方式？",
+        sub: "",
+        options: [
+          { text: "语言表达，把心里的感受说出来。", animals: ["fox", "butterfly", "golden"] },
+          { text: "身体互动，比如拥抱、靠近。", animals: ["dolphin", "rabbit", "horse"] },
+          { text: "实际行动，比如帮忙、付出。", animals: ["beaver", "penguin", "lion"] },
+          { text: "陪伴，对方需要我时我就在。", animals: ["cat", "deer", "turtle"] }
+        ]
+      },
+      {
+        title: "如果有人突然向你倾诉一个沉重的问题，你会怎么做？",
+        sub: "",
+        options: [
+          { text: "先听完，再判断应该怎么回应。", animals: ["owl", "penguin", "turtle"] },
+          { text: "马上安慰，让对方感到有人在。", animals: ["golden", "rabbit", "dolphin"] },
+          { text: "先稳定对方情绪，再帮忙分析。", animals: ["beaver", "fox", "lion"] },
+          { text: "会紧张，不知道怎样回应才合适。", animals: ["deer", "hedgehog", "cat"] }
+        ]
+      },
+      {
+        title: "你更容易被哪一类人吸引？",
+        sub: "",
+        options: [
+          { text: "温柔体贴的人。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "聪明有想法的人。", animals: ["owl", "beaver", "penguin"] },
+          { text: "自由又有趣的人。", animals: ["fox", "butterfly", "horse"] },
+          { text: "稳重可靠的人。", animals: ["lion", "tiger", "turtle"] }
+        ]
+      },
+      {
+        title: "当你感到被爱时，世界通常变成什么样？",
+        sub: "",
+        options: [
+          { text: "变得特别温暖，像被轻轻裹住。", animals: ["golden", "rabbit", "dolphin"] },
+          { text: "变得更可控，好像所有混乱都有了答案。", animals: ["owl", "penguin", "beaver"] },
+          { text: "变得更精彩，让我想创造更多东西。", animals: ["butterfly", "fox", "horse"] },
+          { text: "变得更安全，可以安心做自己。", animals: ["cat", "turtle", "deer"] }
+        ]
+      },
+      {
+        title: "你对亲密关系中的争吵抱持哪一种态度？",
+        sub: "",
+        options: [
+          { text: "能讲清楚误会就好，不希望冷战。", animals: ["golden", "dolphin", "fox"] },
+          { text: "争吵让我非常不安，宁愿暂时逃避。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "可以吵，但必须在那天和好。", animals: ["tiger", "lion", "rabbit"] },
+          { text: "争吵是必要的，让我们更了解彼此。", animals: ["horse", "owl", "beaver"] }
+        ]
+      },
+      {
+        title: "当你在一段感情里越来越依赖一个人时，你的心态更像？",
+        sub: "",
+        options: [
+          { text: "既甜蜜又害怕，害怕失去。", animals: ["rabbit", "deer", "cat"] },
+          { text: "觉得很幸福，对方也是我生活的一部分。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "不知不觉就依赖了，直到某天才发现。", animals: ["hedgehog", "turtle", "owl"] },
+          { text: "会提醒自己保持一点独立。", animals: ["fox", "horse", "tiger"] }
+        ]
+      },
+      {
+        title: "如果未来的你回头看现在，你希望看到什么？",
+        sub: "",
+        options: [
+          { text: "我有在努力成长。", animals: ["beaver", "owl", "horse"] },
+          { text: "我认真爱过，也被爱过。", animals: ["golden", "dolphin", "rabbit"] },
+          { text: "我活得真实，不为别人改变太多。", animals: ["cat", "tiger", "fox"] },
+          { text: "我找到自己的节奏和方向。", animals: ["turtle", "penguin", "deer"] }
+        ]
+      },
+      {
+        title: "当你准备放弃一件事时，最能让你继续坚持的力量来自哪里？",
+        sub: "",
+        options: [
+          { text: "责任感，我已经开始了就要完成。", animals: ["beaver", "penguin", "owl"] },
+          { text: "期待的未来，我想看看结果会如何。", animals: ["horse", "butterfly", "fox"] },
+          { text: "内心的信念，只要我愿意就可以。", animals: ["tiger", "lion", "deer"] },
+          { text: "身边的人相信我。", animals: ["golden", "dolphin", "rabbit"] }
+        ]
+      },
+      {
+        title: "如果只能选一种，你希望别人记住你哪一部分？",
+        sub: "",
+        options: [
+          { text: "温柔。", animals: ["dolphin", "golden", "rabbit"] },
+          { text: "聪明。", animals: ["owl", "beaver", "penguin"] },
+          { text: "独特。", animals: ["fox", "butterfly", "horse"] },
+          { text: "可靠。", animals: ["lion", "tiger", "turtle"] }
+        ]
       }
-      // 👉 想继续加题目，就在这里往后追加 { title, sub, options } 结构即可
-    ];
+       };
+    
+    // 16 种动物解析：简短版 + 详细版
+const animalProfiles = {
+  golden: {
+    name: "金毛犬型",
+    brief: "暖心小太阳，温柔体贴、乐观，会为身边人创造安全感。",
+    detail: `你给人的第一感觉往往是“很好相处”。你愿意照顾每个人的情绪，
+会下意识地观察谁尴尬、谁落单，然后悄悄去填补那个空位。你不喜欢冲突，
+更习惯用幽默、温柔、主动帮忙的方式，让氛围变得轻松一点。
+
+在关系里，你非常重视“被需要”的感觉。别人来找你帮忙、倾诉，你会真心地
+投入时间和精力，哪怕自己有点累也不忍心拒绝。有你在的地方，大家会觉得：
+这里是安全的，是可以随时回来的。
+
+你需要注意的是，你很容易把自己的感受往后排。你会觉得“没关系，我可以撑”，
+但长期压抑会让你偷偷积累委屈。学会适当地说“不”，并不会让你变得冷漠，
+只会让你的温柔更持久、更有力量。`
+  },
+  cat: {
+    name: "猫型",
+    brief: "慢热敏感又独立，喜欢用自己的节奏观察世界。",
+    detail: `你不像一见面就特别热络的人，更像一只需要时间适应环境的猫。
+刚开始你会选择安静观察，感受气氛、判断安全感，然后才慢慢打开自己。
+一旦认定一个人，你会在他看不到的角落里，默默付出很多心思。
+
+你非常需要自己的空间和节奏。独处对你来说不是孤独，而是充电方式。
+你会通过刷剧、听歌、写字、发呆，把自己从外界的噪音里抽离出来。
+
+需要留意的是，你不开心时很少主动说，就算很在意，也会装作没事。
+这会让别人看不懂你，以为你“无所谓”。试着多说一句“我其实有点难过”，
+不是软弱，而是给真正关心你的人一个走近你的机会。`
+  },
+  wolf: {
+    name: "狼型",
+    brief: "有原则的守护者，冷静有边界，对自己人很护。",
+    detail: `你身上有一种“靠谱”的气质。你重感情，但不会盲目。
+你在意公平与边界，面对事情时会习惯先搞清楚来龙去脉，再决定要不要出手。
+真惹到你的人，不会轻易得到第二次机会。
+
+你不会随便对人好，但一旦把谁当成“自己人”，你会非常护短。
+你讨厌看到自己在意的人被不公平对待，也不喜欢拐弯抹角和套路。
+
+有时需要注意的是，你表达观点太直接时，别人可能只感受到“凶”，
+看不到背后的关心。适当地把情绪和理由说清楚，会让你的保护变得更温柔。`
+  },
+  lion: {
+    name: "狮子型",
+    brief: "主心骨型人格，天生有领导力和强烈责任感。",
+    detail: `你天然带着一点“主心骨”的气场。遇到混乱局面，
+你会下意识地思考怎么分工、怎么推进，以及谁更适合做什么。
+你不愿意看着事情烂掉，所以经常是那个站出来的人。
+
+你看重能力，也看重担当。你尊重真正有实力、有责任感的人，
+但对敷衍、推卸和低效会非常不耐烦。你对自己和他人的标准都偏高。
+
+同时，这也容易让你累：你习惯自己扛下所有责任，不太愿意示弱。
+事实上，适当地把压力说出来、学会求助，并不会让你在别人心中不可靠，
+反而会让你看起来更真实、更有温度。`
+  },
+  tiger: {
+    name: "老虎型",
+    brief: "冲劲十足的行动派，宁可犯错也不想错过机会。",
+    detail: `对你来说，很多问题的答案是“先做了再说”。你不喜欢拖拖拉拉，
+也不享受反复犹豫。你宁愿试过再失败，也不想一直停在原地。
+
+你讨厌低效和废话，更偏爱直接、干脆的沟通方式。你面对挑战时，
+往往能硬着头皮上，也能扛下别人不敢接的任务。
+
+需要注意的是，情绪上来的时候，你可能会说话太直、做事太快，
+事后才发现有些细节没考虑。多给自己几秒钟的缓冲时间，
+会让你的勇敢变得更有杀伤力，而不是“只剩下杀伤”。`
+  },
+  dolphin: {
+    name: "海豚型",
+    brief: "温柔治愈的倾听者，擅长安抚和陪伴。",
+    detail: `你对别人的情绪非常敏感，很难无视眼前的难过。
+你习惯先照顾别人的感受，再考虑自己是否有力气。
+你喜欢通过拥抱、安慰、认真倾听，让对方觉得“有人在”。
+
+你在关系里，特别在意“被理解”和“被接住”。你愿意反复为别人想，
+也希望有一天有人可以反过来为你想一想。
+
+你需要注意的是，你太容易共情，可能会被别人的情绪拖垮。
+在说“我陪你”的同时，也要问问自己：“我现在还有力气吗？”
+照顾好自己，不代表你不善良，只代表你也值得被温柔对待。`
+  },
+  penguin: {
+    name: "企鹅型",
+    brief: "稳定踏实的小队友，重视承诺和长期陪伴。",
+    detail: `你喜欢有节奏、有安排的生活，对突然的大变化比较敏感。
+你做事认真靠谱，一旦答应了，通常会做到让人很放心。
+
+在亲密关系和合作关系里，你更看重“能不能长久走下去”
+而不是一时的新鲜。你愿意为稳定付出时间和耐心。
+
+你要注意的是，有时候你会把现实压力都压在自己身上，
+很少向别人求助或表达疲惫。适当地把感受说出来，
+会让你在保持稳定的同时，也不会那么辛苦。`
+  },
+  fox: {
+    name: "狐狸型",
+    brief: "灵巧幽默，会读空气，社交里很加分。",
+    detail: `你非常懂得场合感，知道什么时候该说什么，
+也知道哪些玩笑可以化解尴尬、哪些话最好不要说出口。
+你适应环境很快，在不同的圈子里都能找到自己的位置。
+
+你喜欢新鲜、有趣的人和事，不太能忍受持续的单调和压抑。
+你看问题的角度灵活，点子也多，是很好的气氛创造者。
+
+需要注意的是，你习惯用幽默和轻松去遮住真实情绪，
+久而久之别人会觉得你“总是没事的”。试着在信任的人面前拆掉一点伪装，
+让他们知道：你不止是好笑，也会难过、会受伤、会需要被认真对待。`
+  },
+  butterfly: {
+    name: "蝴蝶型",
+    brief: "爱新鲜爱变化的小冒险家，对无聊过敏。",
+    detail: `你对世界充满好奇，喜欢尝试新地方、新关系、新体验。
+重复单一的生活会让你迅速失去能量，你更擅长在变化和流动中找到快乐。
+
+你有很多灵感和点子，很容易跳出既有框架，看到别人忽略的可能性。
+你也乐于把这种热情传染给身边的人。
+
+需要注意的是，你可能会有点三分钟热度，
+刚开始兴致勃勃，后面却渐渐失去兴趣。为自己保留一些“必须坚持”的小项目，
+能让你的创造力被慢慢积累，而不是只停留在一时的兴奋。`
+  },
+  horse: {
+    name: "马型",
+    brief: "向远处奔跑的探索者，需要空间也需要远方。",
+    detail: `你身上有很强的“流动感”，不喜欢被困住。
+你希望自己随时可以调整方向，尝试新的道路、认识新的人。
+
+你在感情和生活里都很重视自由度。你可以很爱一个人，
+但仍然希望彼此都保留一点个人节奏。
+
+需要注意的是，当别人希望你安定下来时，你可能会本能抗拒，
+觉得那是在限制你。其实“有一个可以回去的地方”，
+并不等于你失去远方，而是多了一个能让你休息的港湾。`
+  },
+  owl: {
+    name: "猫头鹰型",
+    brief: "冷静理性的思考者，看问题喜欢先想清楚再行动。",
+    detail: `你习惯先理解、再做决定。你在意信息是否完整、
+逻辑是否自洽，也擅长从复杂的信息里整理出重点。
+
+别人慌乱时，你往往还能保持相对冷静，思考“下一步怎么办”。
+你不太受情绪波动左右，更在意解决问题本身。
+
+需要注意的是，你有时对“情绪本身”不够耐心，
+会过早地进入“分析模式”，让对方觉得自己被讲道理、而不是被理解。
+偶尔先接住情绪，再谈逻辑，会让你的聪明更有温度。`
+  },
+  beaver: {
+    name: "河狸型",
+    brief: "一步一个脚印的执行者，做事认真到底。",
+    detail: `你是那种说干就干，而且会干到结束的人。
+你喜欢清单、计划、进度条，看到事情一点点完成，会让你非常有安全感。
+
+在团队里，你往往是那个真正把想法变成现实的人。
+你也因此很难忍受“只说不做”“拖拖拉拉”。
+
+需要注意的是，你容易把自己逼得太紧，
+觉得“如果我不顶上去，事情就会出问题”。适度放下一点控制，
+允许别人也来承担，是对自己的一种善待。`
+  },
+  turtle: {
+    name: "乌龟型",
+    brief: "慢热但可靠，节奏慢一点，却走得很稳。",
+    detail: `你不喜欢被催促，最舒服的状态是按自己的速度前进。
+只要节奏在你心里有数，你就能稳稳把事情做完。
+
+你在情绪和关系上都比较慎重，不会轻易亲近，
+但只要真正走进你心里，就很难被轻易赶出去。
+
+需要注意的是，你在害怕变化时，会本能后退，
+有时会错过一些机会。试着在重要节点上给自己一点小小的推动，
+你会发现自己比想象中更有适应能力。`
+  },
+  rabbit: {
+    name: "兔子型",
+    brief: "柔软又敏感，很温柔，也很容易受伤。",
+    detail: `你在意别人的眼光，也在意自己的表现，容易紧张，
+容易反复回想某一句话、某一个表情。你不想给别人添麻烦，
+于是很多情绪都自己消化。
+
+你对别人非常体贴，不会故意戳人痛处，很多时候宁愿自己难过，
+也不想让别人不舒适。
+
+需要注意的是，你习惯把所有问题往自己身上揽，
+觉得“是不是我不够好”。学会区分：有些事不是你的错，
+只是这件事情本来就很难。你值得被温柔对待，也值得被坚定地站在身边。`
+  },
+  deer: {
+    name: "小鹿型",
+    brief: "心软的小心翼翼，对别人总是多想一步。",
+    detail: `你对人和情绪都很敏感。你会反复确认别人是不是开心，
+会担心自己说错话、做错事，让别人难堪。
+
+你很少主动要求什么，只要大家好，你觉得辛苦一点也可以。
+在别人眼里，你是温柔又体谅人的存在。
+
+需要注意的是，你太容易把自己放在最后的位置，
+久而久之会让自己变得很疲惫。适当地说一句“我也需要被考虑一下”，
+不会让你变坏，只会让关系变得更健康。`
+  },
+  hedgehog: {
+    name: "刺猬型",
+    brief: "外表有刺，内心很软，用防御保护自己。",
+    detail: `你不轻易展示自己的脆弱面。你知道世界并不总是温柔，
+所以学会用一点“刺”来保护自己，比如嘴硬、冷淡、假装不在意。
+
+但越了解你的人越知道，你其实很在意、很敏感，
+只是不会说出来而已。你记得别人的每一次好，
+也会默默为在乎的人撑很久。
+
+需要注意的是，防御太强，会让很多真心靠不过来。
+你可以慢慢练习，在你觉得安全的人面前，把刺收一点点，
+让他们看到你柔软的一面。那并不是被看扁，而是被真正看见。`
+  }
+};
+
+
+
 
     // 状态
     let currentIndex = 0;
@@ -601,82 +1643,114 @@
     }
 
     // 展示结果
-    function showResult() {
-      calculateScores();
-      const sorted = Object.entries(scores)
-        .filter(([, v]) => v > 0)
-        .sort((a, b) => b[1] - a[1]);
+  // 展示结果（带前 4 名分数条 + 查看详细解析）
+function showResult() {
+  calculateScores();
+  const sorted = Object.entries(scores)
+    .filter(([, v]) => v > 0)
+    .sort((a, b) => b[1] - a[1]);
 
-      if (sorted.length === 0) {
-        resultAnimal.textContent = "暂时看不出明显的动物倾向";
-        resultLine.textContent   = "可以尝试在不同状态下再测一次，或更贴近真实感受地作答。";
-        mainText.textContent     = "";
-        secondText.textContent   = "";
-        adviceText.textContent   = "你不需要被任何测试定义，这只是一个用来玩耍和自我观察的小工具。";
-        scoreContainer.innerHTML = "";
-        return;
-      }
+  // 如果完全没有得到动物结果
+  if (sorted.length === 0) {
+    resultAnimal.textContent = "暂时看不出明显的动物倾向";
+    resultLine.textContent   = "可以尝试在不同状态下再测一次，或更贴近真实感受地作答。";
+    mainText.textContent     = "";
+    secondText.textContent   = "";
+    adviceText.textContent   = "你不需要被任何测试定义，这只是一个用来玩耍和自我观察的小工具。";
+    scoreContainer.innerHTML = "";
+    return;
+  }
 
-      const [topKey, topScore] = sorted[0];
-      const mainDef = animalDefs[topKey];
-      let secondDef = null;
+  // 主导动物
+  const [topKey] = sorted[0];
+  const mainDef = animalDefs[topKey];
 
-      if (sorted.length > 1) {
-        const [secKey, secScore] = sorted[1];
-        if (secScore > 0) secondDef = animalDefs[secKey];
-      }
+  // 第二动物（可选）
+  let secondDef = null;
+  if (sorted.length > 1) {
+    const [secKey, secScore] = sorted[1];
+    if (secScore > 0) secondDef = animalDefs[secKey];
+  }
 
-      resultAnimal.textContent = `${mainDef.icon} ${mainDef.name}`;
-      resultLine.textContent   = mainDef.brief;
+  // 显示主导 & 第二动物的文字说明
+  resultAnimal.textContent = `${mainDef.icon} ${mainDef.name}`;
+  resultLine.textContent   = mainDef.brief;
 
-      mainText.textContent =
-        `· 你身上这类动物的特质比较明显，在很多场景下都会不自觉地这样反应。\n` +
-        `· 别人第一次接触你时，很可能会先感受到这一面。\n` +
-        `· 这既是你的稳定优势，也是你在压力下最常用的「默认模式」。`;
+  mainText.textContent =
+    `· 你身上这类动物的特质比较明显，在很多场景下都会不自觉地这样反应。\n` +
+    `· 别人第一次接触你时，很可能会先感受到这一面。\n` +
+    `· 这既是你的稳定优势，也是你在压力下最常用的「默认模式」。`;
 
-      if (secondDef) {
-        secondText.textContent =
-          `· 你的性格里还有一只「${secondDef.name}」，在特定情境下会被激活。\n` +
-          `· 有时候你会更像 ${mainDef.name}，有时候又特别像 ${secondDef.name}。\n` +
-          `· 允许自己是一个有层次的人，会让你更自在。`;
+  if (secondDef) {
+    secondText.textContent =
+      `· 你的性格里还有一只「${secondDef.name}」，在特定情境下会被激活。\n` +
+      `· 有时候你会更像 ${mainDef.name}，有时候又特别像 ${secondDef.name}。\n` +
+      `· 允许自己是一个有层次的人，会让你更自在。`;
 
-        adviceText.textContent =
-          `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
-          `来自 ${secondDef.icon} 的提醒：${secondDef.advice}`;
-      } else {
-        secondText.textContent =
-          "目前没有特别突出的第二类型，说明你的主导动物原型比较集中、比较明确。";
-        adviceText.textContent =
-          `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
-          "你可以在不同心情、不同阶段再玩几次，看看会不会跳出不一样的小动物。";
-      }
+    adviceText.textContent =
+      `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
+      `来自 ${secondDef.icon} 的提醒：${secondDef.advice}`;
+  } else {
+    secondText.textContent =
+      "目前没有特别突出的第二类型，说明你的主导动物原型比较集中、比较明确。";
+    adviceText.textContent =
+      `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
+      "你可以在不同心情、不同阶段再玩几次，看看会不会跳出不一样的小动物。";
+  }
 
-      // 分数条：展示前 4 名
-      scoreContainer.innerHTML = "";
-      const topN = sorted.slice(0, 4);
-      const maxScore = topN[0][1] || 1;
+  // ===== 前 4 名分数条 =====
+  scoreContainer.innerHTML = "";
+  const topN = sorted.slice(0, 4);
+  const maxScore = topN[0][1] || 1;
 
-      topN.forEach(([key, value]) => {
-        const def = animalDefs[key];
-        const row = document.createElement("div");
-        row.className = "score-row";
+  topN.forEach(([key, value]) => {
+    const def = animalDefs[key];
+    const row = document.createElement("div");
+    row.className = "score-row";
 
-        const label = document.createElement("div");
-        label.className = "score-label";
-        label.innerHTML = `<span>${def.icon} ${def.name}</span><span>${value} 分</span>`;
+    const label = document.createElement("div");
+    label.className = "score-label";
+    label.innerHTML = `<span>${def.icon} ${def.name}</span><span>${value} 分</span>`;
 
-        const bar = document.createElement("div");
-        bar.className = "score-bar";
-        const inner = document.createElement("div");
-        inner.className = "score-inner";
-        inner.style.width = Math.round((value / maxScore) * 100) + "%";
-        bar.appendChild(inner);
+    const bar = document.createElement("div");
+    bar.className = "score-bar";
+    const inner = document.createElement("div");
+    inner.className = "score-inner";
+    inner.style.width = Math.round((value / maxScore) * 100) + "%";
+    bar.appendChild(inner);
 
-        row.appendChild(label);
-        row.appendChild(bar);
-        scoreContainer.appendChild(row);
-      });
-    }
+    row.appendChild(label);
+    row.appendChild(bar);
+    scoreContainer.appendChild(row);
+  });
+
+  // ===== 查看详细解析按钮（主导动物）=====
+  const detailBtn = document.createElement("button");
+  detailBtn.textContent = "查看详细解析";
+  detailBtn.className = "btn-secondary";
+  detailBtn.style.marginTop = "16px";
+  detailBtn.onclick = () => showDetail(topKey);
+  scoreContainer.appendChild(detailBtn);
+}
+function showDetail(animalKey) {
+  const profile = animalProfiles[animalKey];
+
+  resultAnimal.textContent = `${profile.name} · 详细解析`;
+  resultLine.textContent   = "";
+  mainText.textContent     = profile.detail;
+  secondText.textContent   = "";
+  adviceText.textContent   = "";
+
+  scoreContainer.innerHTML = "";
+
+  const backBtn = document.createElement("button");
+  backBtn.textContent = "返回简要结果";
+  backBtn.className = "btn-secondary";
+  backBtn.style.marginTop = "16px";
+  backBtn.onclick = showResult;
+  scoreContainer.appendChild(backBtn);
+}
+
 
     // 事件绑定
     document.getElementById("startBtn").addEventListener("click", () => {
