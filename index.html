@@ -2,54 +2,59 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
-  <title>24动物性格小测试｜暗黑粉版</title>
+  <title>16动物性格小测试</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
-   body {
-  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial;
-  background: linear-gradient(180deg, #ffe9f3 0%, #f4f6ff 45%, #ffffff 100%);
-  color: #222;
-  min-height: 100vh;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial;
+      background:
+        radial-gradient(circle at top, rgba(255, 143, 184, 0.28), transparent 55%),
+        radial-gradient(circle at bottom, rgba(255, 187, 216, 0.18), #06050a);
+      color: #f5f5f7;
+      min-height: 100vh;
+    }
 
-.app {
-  width: 100%;
-  min-height: 100vh;
-}
+    .app {
+      width: 100%;
+      max-width: 720px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
 
-/* 卡片区域：中间有一点白底+阴影，不再是纯暗色 */
-.card {
-  width: 100%;
-  max-width: 640px;
-  margin: 24px auto 32px;
-  padding: 22px 18px 30px;
-  background: rgba(255, 255, 255, 0.94);
-  border-radius: 24px;
-  box-shadow: 0 16px 40px rgba(189, 160, 210, 0.25);
-}
+    /* 封面：整屏 */
 
+    .card-start {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding: 28px 18px 22px;
+    }
 
-   .title-main {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 6px;
-  color: #2b1030;
-}
+    .start-main {
+      padding-top: 10px;
+    }
 
-.title-sub {
-  font-size: 13px;
-  color: #7b7080;
-  margin-bottom: 12px;
-  line-height: 1.5;
-}
+    .title-main {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #ffffff;
+    }
+
+    .title-sub {
+      font-size: 13px;
+      color: #d0cfe4;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
+      gap: 8px;
+      margin-bottom: 20px;
     }
 
     .pill {
@@ -58,9 +63,9 @@
       font-size: 11px;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255,192,203,0.25);
-      background: rgba(255,192,203,0.06);
-      color: #f5d8f0;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(10, 8, 16, 0.45);
+      color: #f5d7ec;
     }
 
     .pill span { margin-right: 4px; }
@@ -72,26 +77,24 @@
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
-      background: linear-gradient(135deg,#ff4b8a,#ff91c9);
+      background: linear-gradient(135deg, #ff4b8a, #ff9ccc);
       color: #ffffff;
       width: 100%;
-      margin-top: 14px;
-      box-shadow: 0 10px 25px rgba(255,75,138,0.45);
-      transition: transform 0.1s ease, box-shadow 0.1s ease, opacity 0.15s;
+      box-shadow: 0 12px 30px rgba(255, 75, 138, 0.5);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s;
     }
 
     button:active {
       transform: translateY(1px);
-      box-shadow: 0 6px 16px rgba(255,75,138,0.35);
+      box-shadow: 0 7px 18px rgba(255, 75, 138, 0.4);
       opacity: 0.96;
     }
 
     .btn-secondary {
-      background: rgba(255,255,255,0.05);
-      color: #e3e3ea;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #f0f0ff;
       box-shadow: none;
-      border: 1px solid rgba(255,255,255,0.08);
-      margin-top: 14px;
     }
     .btn-secondary:active {
       box-shadow: none;
@@ -100,18 +103,37 @@
     .btn-row {
       display: flex;
       gap: 10px;
-      margin-top: 16px;
+      margin-top: 18px;
     }
     .btn-row button {
       width: 50%;
     }
 
+    .start-bottom {
+      margin-top: auto;
+      padding-bottom: 8px;
+    }
+
     .tip {
       font-size: 11px;
-      color: #8c8fa1;
+      color: #9b9db5;
       margin-top: 10px;
       text-align: center;
       line-height: 1.4;
+    }
+
+    /* 测试页卡片 */
+
+    .card {
+      padding: 24px 18px 26px;
+    }
+
+    .panel {
+      margin-top: 8px;
+      padding: 18px 14px 22px;
+      background: rgba(9, 9, 16, 0.94);
+      border-radius: 22px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
     }
 
     .progress-wrap {
@@ -121,21 +143,20 @@
       display: flex;
       justify-content: space-between;
       font-size: 11px;
-      color: #9a9db0;
+      color: #a4a7bf;
       margin-bottom: 6px;
     }
     .progress-bar {
       width: 100%;
-      height: 7px;
+      height: 6px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.04);
+      background: rgba(255, 255, 255, 0.08);
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
     }
     .progress-inner {
       height: 100%;
       border-radius: 999px;
-      background: linear-gradient(135deg,#ff4b8a,#ff91c9);
+      background: linear-gradient(135deg, #ff4b8a, #ff9ccc);
       width: 0%;
       transition: width 0.25s ease;
     }
@@ -143,14 +164,14 @@
     .question-title {
       font-size: 17px;
       font-weight: 600;
-      margin-bottom: 8px;
-      line-height: 1.5;
+      margin-bottom: 6px;
       color: #ffffff;
+      line-height: 1.6;
     }
 
     .question-sub {
       font-size: 12px;
-      color: #9a9db0;
+      color: #a4a7bf;
       margin-bottom: 10px;
     }
 
@@ -161,20 +182,21 @@
       margin-top: 4px;
     }
 
- .opt {
-  font-size: 13px;
-  padding: 10px 12px;
-  border-radius: 14px;
-  border: 1px solid #f0e3ff;
-  background: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: all 0.16s ease;
-  color: #33313d;
-}
+    /* 白底选项卡片 */
 
+    .opt {
+      font-size: 13px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid #f0e3ff;
+      background: #ffffff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.16s ease;
+      color: #33313d;
+    }
 
     .opt-main {
       display: flex;
@@ -183,16 +205,28 @@
     }
 
     .opt.selected {
-  border-color: #ff8fb8;
-  background: #ffe6f3;
-  color: #2b1030;
-  box-shadow: 0 6px 16px rgba(255, 143, 184, 0.35);
-}
+      border-color: #ff8fb8;
+      background: #ffe6f3;
+      color: #2b1030;
+      box-shadow: 0 6px 16px rgba(255, 143, 184, 0.35);
+    }
+
+    .btn-row-bottom {
+      margin-top: 18px;
+      display: flex;
+      gap: 10px;
+    }
+    .btn-row-bottom button {
+      width: 50%;
+      box-shadow: none;
+    }
+
+    /* 结果页 */
 
     .result-header {
       margin-bottom: 12px;
-      padding: 6px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
 
     .result-badge {
@@ -201,9 +235,9 @@
       gap: 4px;
       padding: 4px 10px;
       border-radius: 999px;
-      background: rgba(255,105,180,0.13);
+      background: rgba(255, 143, 184, 0.2);
       font-size: 11px;
-      color: #ffb9df;
+      color: #ffd2ea;
       margin-bottom: 6px;
     }
 
@@ -213,9 +247,10 @@
       margin-bottom: 4px;
       color: #ffffff;
     }
+
     .result-line {
       font-size: 13px;
-      color: #b0b3c0;
+      color: #d0cfe4;
     }
 
     .section-title {
@@ -241,29 +276,28 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 3px;
-      color: #d3d6e5;
+      color: #e0e3f2;
     }
 
     .score-bar {
       width: 100%;
-      height: 7px;
-      background: rgba(255,255,255,0.05);
+      height: 6px;
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 999px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.06);
     }
 
     .score-inner {
       height: 100%;
       border-radius: 999px;
-      background: linear-gradient(135deg,#ff4b8a,#ff91c9);
+      background: linear-gradient(135deg, #ff4b8a, #ff9ccc);
       width: 0%;
       transition: width 0.3s ease;
     }
 
     .loading {
       font-size: 13px;
-      color: #d3d6e5;
+      color: #e0e3f2;
       margin-top: 16px;
     }
 
@@ -287,236 +321,207 @@
 </head>
 <body>
   <div class="app">
-    <!-- 起始页 -->
-    <div class="card" id="startCard">
-      <div class="title-main">24动物性格小测试</div>
-      <div class="title-sub">
-        从日常选择、情绪反应和相处方式出发，看看你更像哪一种动物原型。<br>
-        本测试偏娱乐向，不做任何专业诊断，仅供你了解自己的一些小倾向。
+    <!-- 封面 -->
+    <div class="card-start" id="startCard">
+      <div class="start-main">
+        <div class="title-main">16动物性格小测试</div>
+        <div class="title-sub">
+          从日常选择、情绪反应和相处方式出发，看看你更像哪几只小动物。<br>
+          测试偏娱乐向，不做任何专业诊断，只是帮你多一个看自己的角度。
+        </div>
+        <div class="pill-row">
+          <div class="pill"><span>•</span> 一题一页，沉浸作答</div>
+          <div class="pill"><span>•</span> 内部 16 种动物原型</div>
+          <div class="pill"><span>•</span> 结果可截图分享</div>
+        </div>
       </div>
-      <div class="pill-row">
-        <div class="pill"><span>•</span> 一题一页，沉浸作答</div>
-        <div class="pill"><span>•</span> 当前为示例题，可逐步扩展到 96 题</div>
-        <div class="pill"><span>•</span> 结果可截图分享给朋友</div>
+      <div class="start-bottom">
+        <button id="startBtn">开始测试</button>
+        <div class="tip">尽量选择「平时的你」，而不是你理想中的样子。</div>
       </div>
-      <button id="startBtn">开始测试</button>
-      <div class="tip">尽量选择「平时的你」，而不是你理想中的样子。</div>
     </div>
 
-    <!-- 题目页 -->
+    <!-- 测试页 -->
     <div class="card" id="quizCard" style="display:none;">
-      <div class="progress-wrap">
-        <div class="progress-label">
-          <span id="progressText">第 1 题 / 共 1 题</span>
-          <span id="progressPercent">0%</span>
+      <div class="panel">
+        <div class="progress-wrap">
+          <div class="progress-label">
+            <span id="progressText">第 1 题 / 共 1 题</span>
+            <span id="progressPercent">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-inner" id="progressInner"></div>
+          </div>
         </div>
-        <div class="progress-bar">
-          <div class="progress-inner" id="progressInner"></div>
+
+        <div class="question-title" id="questionTitle"></div>
+        <div class="question-sub" id="questionSub"></div>
+        <div class="options" id="optionsContainer"></div>
+
+        <div class="btn-row-bottom">
+          <button class="btn-secondary" id="prevBtn">上一题</button>
+          <button id="nextBtn">下一题</button>
         </div>
       </div>
-
-      <div class="question-title" id="questionTitle"></div>
-      <div class="question-sub" id="questionSub"></div>
-      <div class="options" id="optionsContainer"></div>
-
-      <div class="btn-row">
-        <button class="btn-secondary" id="prevBtn">上一题</button>
-        <button id="nextBtn">下一题</button>
-      </div>
-      <div class="tip">如果有两个选项都像你，就选更常出现的那个。</div>
+      <div class="tip">如果有两个选项都很像你，就选「更常出现」的那个。</div>
     </div>
 
     <!-- 结果页 -->
     <div class="card" id="resultCard" style="display:none;">
-      <div class="result-header">
-        <div class="result-badge">
-          <span></span> 你的动物性格组合
+      <div class="panel">
+        <div class="result-header">
+          <div class="result-badge">你的动物性格组合</div>
+          <div class="result-animal" id="resultAnimal"></div>
+          <div class="result-line" id="resultLine"></div>
         </div>
-        <div class="result-animal" id="resultAnimal"></div>
-        <div class="result-line" id="resultLine"></div>
+
+        <div id="scoreContainer"></div>
+
+        <div class="section-title">主导动物原型</div>
+        <div class="section-text" id="mainText"></div>
+
+        <div class="section-title">辅佐 / 隐藏动物原型</div>
+        <div class="section-text" id="secondText"></div>
+
+        <div class="section-title">给你的一个小提醒</div>
+        <div class="section-text" id="adviceText"></div>
+
+        <button id="restartBtn" style="margin-top:18px;">重新测试一次</button>
       </div>
-
-      <div id="scoreContainer"></div>
-
-      <div class="section-title">主导动物原型</div>
-      <div class="section-text" id="mainText"></div>
-
-      <div class="section-title">辅佐/隐藏动物原型</div>
-      <div class="section-text" id="secondText"></div>
-
-      <div class="section-title">给你的一个小提醒</div>
-      <div class="section-text" id="adviceText"></div>
-
-      <button id="restartBtn">重新测试一次</button>
-      <div class="tip">可以截图保存结果，发到笔记里或分享给朋友一起玩～</div>
+      <div class="tip">可以截图保存结果，发到笔记里或者分享给朋友一起玩～</div>
     </div>
 
-    <!-- 过渡加载页 -->
+    <!-- 加载页 -->
     <div class="card" id="loadingCard" style="display:none;">
-      <div class="title-main">正在生成你的动物档案</div>
-      <div class="title-sub">
-        我会根据你刚才的选择，综合不同动物原型的得分，为你生成一份轻量级的动物性格报告。
+      <div class="panel">
+        <div class="title-main" style="font-size:20px;margin-bottom:6px;">正在整理你的动物档案</div>
+        <div class="title-sub" style="margin-bottom:10px;">
+          根据你的选择，对 16 种不同动物原型进行简单加权，生成一份属于你的动物性格报告。
+        </div>
+        <div class="loading">
+          分析中<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="tip" style="margin-top:14px;">
+          本测试不会存储你的个人信息，所有计算都只在你当前设备本地完成。
+        </div>
       </div>
-      <div class="loading">
-        分析中<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-      </div>
-      <div class="tip">本测试不会存储你的个人信息，所有计算都只在你当前设备本地完成。</div>
     </div>
   </div>
 
   <script>
-    // ===== 24 种动物原型定义（简版） =====
+    // 16 种动物原型：一定包含猫和金毛
     const animalDefs = {
-      lion:      { key:"lion",      name:"狮子 · 领导型",    icon:"🦁", brief:"目标感强、行动力高，习惯站在局中央做决定。", advice:"记得偶尔放慢一点，让别人也参与进来。" },
-      tiger:     { key:"tiger",     name:"老虎 · 爆发型",    icon:"🐯", brief:"冲劲十足，敢想敢干，关键时刻往往冲在最前面。", advice:"冲之前多给自己几秒思考，会更省力。" },
-      eagle:     { key:"eagle",     name:"鹰 · 远眺型",      icon:"🦅", brief:"擅长看大局，习惯从更高的视角思考问题。", advice:"适当关注当下的细节，会让你的想法更容易落地。" },
-      bull:      { key:"bull",      name:"公牛 · 硬核型",    icon:"🐂", brief:"耐受度高、比较能扛压，一旦认准就很难被动摇。", advice:"适当听听他人的反馈，会避免不必要的损耗。" },
-      cat:       { key:"cat",       name:"猫 · 慢热型",      icon:"🐱", brief:"外表佛系，内心细腻，对氛围和情绪非常敏感。", advice:"你的感受很重要，别总是只照顾别人。" },
-      deer:      { key:"deer",      name:"鹿 · 害羞型",      icon:"🦌", brief:"有礼貌、顾虑多，容易紧张，但非常善良。", advice:"你有权利占一点空间，不必总是退到最后面。" },
-      rabbit:    { key:"rabbit",    name:"兔子 · 软萌型",    icon:"🐰", brief:"需要安全感，讨厌冲突，喜欢柔和的相处方式。", advice:"温柔不是弱点，你也可以在温柔里长出边界。" },
-      hedgehog:  { key:"hedgehog",  name:"刺猬 · 外冷内暖型",icon:"🦔", brief:"容易先立起刺保护自己，熟了之后会非常细心。", advice:"适当向可信的人卸下一点防备，会更轻松。" },
-      fox:       { key:"fox",       name:"狐狸 · 机灵型",    icon:"🦊", brief:"反应快，会读空气，擅长调节氛围。", advice:"你的幽默很迷人，但也记得照顾自己的感受。" },
-      golden:    { key:"golden",    name:"金毛 · 太阳型",    icon:"🐶", brief:"热情、真诚、很会给别人带来安全感。", advice:"适当把热情留给自己一点，不用对所有人都那么好。" },
-      monkey:    { key:"monkey",    name:"猴子 · 活力型",    icon:"🐒", brief:"好奇心重，点子多，很难长时间安静待着。", advice:"选一两件事长期坚持，你的创意会积累成实力。" },
-      parrot:    { key:"parrot",    name:"鹦鹉 · 表达型",    icon:"🦜", brief:"话多、爱分享，最怕的是没有回应。", advice:"学习一些倾听技巧，你会更受欢迎。" },
-      dolphin:   { key:"dolphin",   name:"海豚 · 共情型",    icon:"🐬", brief:"很会照顾别人情绪，是天生的治愈系。", advice:"共情别人的同时，也别忘记安顿你自己。" },
-      penguin:   { key:"penguin",   name:"企鹅 · 陪伴型",    icon:"🐧", brief:"稳定、黏人、对感情很专一。", advice:"合理表达需求，比默默付出更健康。" },
-      whale:     { key:"whale",     name:"鲸鱼 · 大心脏型",  icon:"🐳", brief:"包容度高，不太轻易爆炸，更像一块安静的大石头。", advice:"你也需要被照顾，不要总是扮演「没事的人」。" },
-      otter:     { key:"otter",     name:"水獭 · 撒娇型",    icon:"🦦", brief:"喜欢互动和黏糊糊的亲密感，重视仪式感。", advice:"适当练习独处能力，会让亲密关系更轻松。" },
-      owl:       { key:"owl",       name:"猫头鹰 · 理智型",  icon:"🦉", brief:"思考很多，喜欢在做决定前先弄清来龙去脉。", advice:"有时候先行动，再边走边修也没问题。" },
-      wolf:      { key:"wolf",      name:"狼 · 团队型",      icon:"🐺", brief:"团队意识强，有自己的原则和底线。", advice:"对自己稍微柔软一点，不用时刻都那么警觉。" },
-      beaver:    { key:"beaver",    name:"河狸 · 实干型",    icon:"🦫", brief:"动手能力强，脚踏实地，能把事一步步做出来。", advice:"允许自己偶尔不那么高效，也是在蓄力。" },
-      turtle:    { key:"turtle",    name:"乌龟 · 稳稳型",    icon:"🐢", brief:"节奏慢但稳定，习惯仔细思考后再前进。", advice:"世界不一定会等你，但适当的「慢」会帮你避坑。" },
-      horse:     { key:"horse",     name:"马 · 自由型",      icon:"🐴", brief:"爱自由、爱速度，讨厌被过度束缚。", advice:"找到既有空间又有底线的关系，会让你更舒服。" },
-      squirrel:  { key:"squirrel",  name:"松鼠 · 小计划控",  icon:"🐿️", brief:"爱存东西、爱做计划，未雨绸缪型人格。", advice:"别把自己困死在计划里，留一点即兴给生活。" },
-      butterfly: { key:"butterfly", name:"蝴蝶 · 变化型",    icon:"🦋", brief:"容易被新鲜事物吸引，喜欢轻盈和变化。", advice:"选一些值得长时间陪伴的东西，会让你更有底气。" },
-      chameleon: { key:"chameleon", name:"变色龙 · 适应型",  icon:"🦎", brief:"适应力超强，很会根据环境调整自己。", advice:"保持一点「不变的核心」，在变化中守住自己。" }
+      cat:       { key: "cat",       name: "猫 · 慢热观察型",   icon: "🐱", brief: "表面佛系，内心细腻敏感，习惯先观察再行动。", advice: "你的感受很重要，适当说出来，会更舒服。" },
+      golden:    { key: "golden",    name: "金毛 · 太阳型",     icon: "🐶", brief: "热情真诚，喜欢给别人带去安全感和温暖。", advice: "适当把热情留给自己一点，不用对所有人都那么好。" },
+      fox:       { key: "fox",       name: "狐狸 · 机灵社交型", icon: "🦊", brief: "会读空气，善于调节氛围，反应很快。", advice: "幽默是礼物，但也要照顾自己的情绪底线。" },
+      rabbit:    { key: "rabbit",    name: "兔子 · 软萌和平型", icon: "🐰", brief: "讨厌冲突，喜欢温柔稳定的关系和环境。", advice: "温柔不是软弱，你也可以在柔软里长出边界。" },
+      owl:       { key: "owl",       name: "猫头鹰 · 理智思考型", icon: "🦉", brief: "习惯先想清楚再行动，喜欢了解来龙去脉。", advice: "有时先动起来，再边走边修也没问题。" },
+      wolf:      { key: "wolf",      name: "狼 · 团队守护型",   icon: "🐺", brief: "重视团队和「自己人」，有明确的原则和底线。", advice: "对自己柔软一点，不需要时刻都在警戒。" },
+      dolphin:   { key: "dolphin",   name: "海豚 · 共情治愈型", icon: "🐬", brief: "共情力很强，很会照顾别人的情绪。", advice: "照顾别人的同时，也别忘了安顿你自己的感受。" },
+      hedgehog:  { key: "hedgehog",  name: "刺猬 · 外冷内暖型", icon: "🦔", brief: "一开始会竖起刺保护自己，熟了之后很柔软。", advice: "尝试向可信的人卸下一点点防备，会轻松很多。" },
+      deer:      { key: "deer",      name: "鹿 · 害羞体贴型",   icon: "🦌", brief: "敏感细腻、顾虑较多，容易紧张但很体贴。", advice: "你有资格占一点空间，不用总是往后退。" },
+      tiger:     { key: "tiger",     name: "老虎 · 冲劲行动型", icon: "🐯", brief: "敢想敢冲，讨厌拖泥带水，喜欢直接行动。", advice: "冲之前多给自己几秒思考，会更省力。" },
+      lion:      { key: "lion",      name: "狮子 · 领导主心骨型", icon: "🦁", brief: "自然会站到中间协调和组织，目标感强。", advice: "记得让别人也参与决策，你会更轻松。" },
+      turtle:    { key: "turtle",    name: "乌龟 · 稳稳慢热型", icon: "🐢", brief: "节奏偏慢但稳定，不喜欢被催促和打乱计划。", advice: "别人未必会等你，适当加一点弹性对你是保护。" },
+      butterfly: { key: "butterfly", name: "蝴蝶 · 变化体验型", icon: "🦋", brief: "被新鲜感吸引，喜欢轻盈和变化。", advice: "保留一点长期稳定的东西，会让你更有安全感。" },
+      beaver:    { key: "beaver",    name: "河狸 · 实干执行型", icon: "🦫", brief: "脚踏实地，擅长把事情一步步落地。", advice: "偶尔允许自己不那么高效，也是另一种充电。" },
+      penguin:   { key: "penguin",   name: "企鹅 · 陪伴黏黏型", icon: "🐧", brief: "重视陪伴和仪式感，喜欢熟悉的人和固定的小圈子。", advice: "试着表达你的需求，而不是闷在心里。" },
+      horse:     { key: "horse",     name: "马 · 自由探索型",   icon: "🐴", brief: "喜欢空间和自由，不太爱被过度束缚。", advice: "在自由和承诺之间找到平衡，会非常加分。" }
     };
 
-    // ===== 示例题目（后续可以一起慢慢加到 96 题） =====
-    // 每个选项的 animals：内部计分映射，用户看不到
+    // 题目（先放 8 题样例，你可以按同样格式继续往后加）
     const questions = [
       {
         title: "在一群新朋友的聚会上，你更常见的状态是？",
-        sub: "不用想太久，选一个最接近「真实的你」的。",
+        sub: "不用想太久，选一个最接近真实状态的你。",
         options: [
-          {
-            text: "先帮忙看看要怎么安排，顺手组织一下大家。",
-            animals: ["lion", "tiger", "eagle"]
-          },
-          {
-            text: "找个舒服的位置坐好，慢慢观察大家的气质。",
-            animals: ["cat", "deer", "owl"]
-          },
-          {
-            text: "到处串桌打招呼，试着和不同的人搭上话。",
-            animals: ["fox", "golden", "monkey"]
-          },
-          {
-            text: "和熟悉的人待在一起，偶尔礼貌性和别人互动。",
-            animals: ["penguin", "rabbit", "hedgehog"]
-          }
+          { text: "先帮忙看看要怎么安排，顺手组织一下大家。", animals: ["lion", "tiger", "wolf"] },
+          { text: "找个舒服的位置坐好，先观察大家的气质。", animals: ["cat", "owl", "deer"] },
+          { text: "到处串桌打招呼，试着和不同的人搭上话。", animals: ["golden", "fox", "butterfly"] },
+          { text: "和熟悉的人待在一起，偶尔礼貌性和别人互动。", animals: ["rabbit", "penguin", "hedgehog"] }
         ]
       },
       {
-        title: "当你很累很烦时，更想要的恢复方式是？",
+        title: "当你累到有点烦的时候，你更想要的恢复方式是？",
         sub: "",
         options: [
-          {
-            text: "一个人安静待着，谁都先别找我。",
-            animals: ["turtle", "owl", "cat"]
-          },
-          {
-            text: "和最亲近的人窝在一起，什么都不做也可以。",
-            animals: ["dolphin", "penguin", "otter"]
-          },
-          {
-            text: "出去玩一轮，吃好吃的、逛逛街、看看新东西。",
-            animals: ["butterfly", "horse", "monkey"]
-          },
-          {
-            text: "干脆投入到一件要做的事里，把注意力挪走。",
-            animals: ["beaver", "bull", "wolf"]
-          }
+          { text: "一个人安静待着，刷刷手机或发呆，谁都先别找我。", animals: ["cat", "turtle", "owl"] },
+          { text: "和最亲近的人窝在一起，聊天或者什么都不做。", animals: ["dolphin", "penguin", "rabbit"] },
+          { text: "出去走走、吃点好吃的、逛逛街，换个环境。", animals: ["butterfly", "horse", "fox"] },
+          { text: "干脆投入到一件要做的事情里，把注意力挪走。", animals: ["beaver", "tiger", "wolf"] }
         ]
       },
       {
-        title: "遇到别人情绪低落、来找你倾诉时，你通常会？",
+        title: "遇到别人情绪低落来找你倾诉时，你通常会？",
         sub: "",
         options: [
-          {
-            text: "立刻帮 Ta 分析问题、想解决办法。",
-            animals: ["owl", "eagle", "wolf"]
-          },
-          {
-            text: "先认真听完，安慰和共情放在第一位。",
-            animals: ["dolphin", "whale", "cat"]
-          },
-          {
-            text: "用轻松的方式和一点点玩笑帮 Ta 缓和气氛。",
-            animals: ["fox", "monkey", "parrot"]
-          },
-          {
-            text: "会有点手足无措，但会默默陪在身边。",
-            animals: ["rabbit", "deer", "penguin"]
-          }
+          { text: "立刻帮 Ta 分析问题、想解决办法。", animals: ["owl", "lion", "beaver"] },
+          { text: "先认真听完，安慰和共情放在第一位。", animals: ["dolphin", "cat", "penguin"] },
+          { text: "用轻松的方式和一点点玩笑帮 Ta 缓和气氛。", animals: ["fox", "golden", "butterfly"] },
+          { text: "会有点手足无措，但会默默陪在身边。", animals: ["deer", "rabbit", "hedgehog"] }
         ]
       },
       {
-        title: "面对一个全新的机会（比如城市、项目、工作），你的第一反应是？",
+        title: "临近一个重要 ddl / 考试 / 项目收尾，你的习惯是？",
         sub: "",
         options: [
-          {
-            text: "兴奋，先冲过去再说，边做边看。",
-            animals: ["tiger", "horse", "lion"]
-          },
-          {
-            text: "冷静评估利弊，想清楚再决定要不要去。",
-            animals: ["owl", "turtle", "beaver"]
-          },
-          {
-            text: "先看看身边重要的人会怎么选择。",
-            animals: ["wolf", "penguin", "golden"]
-          },
-          {
-            text: "有点想去，但会担心很多细节，容易犹豫。",
-            animals: ["hedgehog", "cat", "deer"]
-          }
+          { text: "早早规划，按计划稳稳推进，尽量不临时抱佛脚。", animals: ["beaver", "owl", "turtle"] },
+          { text: "前期拖着，到最后几天猛冲一波。", animals: ["tiger", "horse", "fox"] },
+          { text: "看周围人紧张我也会紧张，但会边焦虑边慢慢做。", animals: ["cat", "deer", "hedgehog"] },
+          { text: "如果有人一起做会动力更强，一个人容易分心。", animals: ["golden", "penguin", "wolf"] }
         ]
       },
       {
-        title: "如果用一种场景形容你理想的生活氛围，你更偏向？",
+        title: "在亲密关系或很好的朋友面前，你更像？",
         sub: "",
         options: [
-          {
-            text: "节奏明确、大家各司其职但目标统一的团队。",
-            animals: ["bull", "wolf", "beaver"]
-          },
-          {
-            text: "有稳定小窝，偶尔和熟人聚会，经常在家躺着。",
-            animals: ["cat", "rabbit", "penguin"]
-          },
-          {
-            text: "经常可以切换城市/环境，保持新鲜感。",
-            animals: ["butterfly", "horse", "chameleon"]
-          },
-          {
-            text: "白天高效做事，夜晚留给自己发呆/阅读/思考。",
-            animals: ["owl", "turtle", "whale"]
-          }
+          { text: "小太阳型，喜欢主动表达爱、给对方鼓励和支持。", animals: ["golden", "dolphin", "penguin"] },
+          { text: "慢热型，熟了之后会很黏人，但外人看不太出来。", animals: ["cat", "hedgehog", "deer"] },
+          { text: "行动派，更多是用做事、帮忙解决问题表达在乎。", animals: ["beaver", "lion", "tiger"] },
+          { text: "自由风，既在乎对方，又很看重彼此的空间感。", animals: ["horse", "butterfly", "wolf"] }
+        ]
+      },
+      {
+        title: "当团队里出现分歧和争吵，你更可能？",
+        sub: "",
+        options: [
+          { text: "试着站出来协调，说服大家坐下来好好聊。", animals: ["lion", "golden", "dolphin"] },
+          { text: "尽量当和事佬，让气氛别太尴尬。", animals: ["fox", "penguin", "rabbit"] },
+          { text: "不太想参与其中，更想安静地先旁观。", animals: ["cat", "turtle", "deer"] },
+          { text: "坚持自己认为对的，如果很关键会据理力争。", animals: ["wolf", "tiger", "beaver"] }
+        ]
+      },
+      {
+        title: "对你来说，什么最容易让你感觉「很有意义」？",
+        sub: "",
+        options: [
+          { text: "看到自己完成了一件本来觉得很难的事。", animals: ["tiger", "beaver", "lion"] },
+          { text: "陪伴和治愈到身边重要的人。", animals: ["dolphin", "golden", "penguin"] },
+          { text: "一步步靠近自己喜欢的生活方式。", animals: ["horse", "butterfly", "owl"] },
+          { text: "哪怕是小事，但有人认真地接住我的心意。", animals: ["cat", "rabbit", "hedgehog"] }
+        ]
+      },
+      {
+        title: "如果用一种状态形容你理想的一天，你更接近？",
+        sub: "",
+        options: [
+          { text: "早起效率不错，把计划内的事都踏实做到。", animals: ["beaver", "turtle", "owl"] },
+          { text: "有固定的工作 / 学习时间，也有和喜欢的人相处。", animals: ["golden", "penguin", "wolf"] },
+          { text: "白天比较自由，随时可以决定去哪里、做什么。", animals: ["horse", "butterfly", "fox"] },
+          { text: "节奏不一定高效，但整体是轻松、舒服、不焦虑的。", animals: ["cat", "rabbit", "dolphin"] }
         ]
       }
-      // 之后我们可以继续在这里往下加问题，一直加到 96 题
+      // 👉 想继续加题目，就在这里往后追加 { title, sub, options } 结构即可
     ];
 
-    // ===== 状态相关 =====
+    // 状态
     let currentIndex = 0;
     let answers = new Array(questions.length).fill(null);
     let scores = {};
 
     function resetScores() {
       scores = {};
-      Object.keys(animalDefs).forEach(k => { scores[k] = 0; });
+      Object.keys(animalDefs).forEach(k => scores[k] = 0);
     }
     resetScores();
 
@@ -553,7 +558,6 @@
       progressInner.style.width   = percent + "%";
 
       optionsContainer.innerHTML = "";
-
       q.options.forEach((opt, idx) => {
         const div = document.createElement("div");
         div.className = "opt";
@@ -561,10 +565,8 @@
 
         const optMain = document.createElement("div");
         optMain.className = "opt-main";
-
         const textSpan = document.createElement("span");
         textSpan.textContent = opt.text;
-
         optMain.appendChild(textSpan);
         div.appendChild(optMain);
 
@@ -602,15 +604,15 @@
     function showResult() {
       calculateScores();
       const sorted = Object.entries(scores)
-        .filter(([,v]) => v > 0)
-        .sort((a,b) => b[1] - a[1]);
+        .filter(([, v]) => v > 0)
+        .sort((a, b) => b[1] - a[1]);
 
       if (sorted.length === 0) {
         resultAnimal.textContent = "暂时看不出明显的动物倾向";
-        resultLine.textContent   = "可以尝试在不同状态下再测一次，或者更贴近真实感受地作答。";
+        resultLine.textContent   = "可以尝试在不同状态下再测一次，或更贴近真实感受地作答。";
         mainText.textContent     = "";
         secondText.textContent   = "";
-        adviceText.textContent   = "你不需要被任何测试定义，这只是一个用来玩耍和反思的小工具。";
+        adviceText.textContent   = "你不需要被任何测试定义，这只是一个用来玩耍和自我观察的小工具。";
         scoreContainer.innerHTML = "";
         return;
       }
@@ -628,26 +630,28 @@
       resultLine.textContent   = mainDef.brief;
 
       mainText.textContent =
-        `· 你身上这类动物的特质比较明显，在很多情境下都会不自觉地以这种方式反应。\n` +
-        `· 别人眼里的你，往往也会带有这种动物给人的第一印象。\n` +
-        `· 这类特质在你身上，多半是从生活经历中慢慢养成的，不必评价好坏，更像是一套「默认模式」。`;
+        `· 你身上这类动物的特质比较明显，在很多场景下都会不自觉地这样反应。\n` +
+        `· 别人第一次接触你时，很可能会先感受到这一面。\n` +
+        `· 这既是你的稳定优势，也是你在压力下最常用的「默认模式」。`;
 
       if (secondDef) {
         secondText.textContent =
-          `· 你体内还有一只「${secondDef.name}」，在某些特定场景下会被激活。\n` +
-          `· 这会让你的性格更立体：有时候像 ${mainDef.name}，有时候又很像 ${secondDef.name}。\n` +
-          `· 好好和这两只小动物和平相处，会让你在不同环境里都更自在。`;
+          `· 你的性格里还有一只「${secondDef.name}」，在特定情境下会被激活。\n` +
+          `· 有时候你会更像 ${mainDef.name}，有时候又特别像 ${secondDef.name}。\n` +
+          `· 允许自己是一个有层次的人，会让你更自在。`;
+
         adviceText.textContent =
           `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
           `来自 ${secondDef.icon} 的提醒：${secondDef.advice}`;
       } else {
-        secondText.textContent = "目前没有特别突出的第二类型，说明你的主要动物原型比较集中、比较明显。";
+        secondText.textContent =
+          "目前没有特别突出的第二类型，说明你的主导动物原型比较集中、比较明确。";
         adviceText.textContent =
           `来自 ${mainDef.icon} 的提醒：${mainDef.advice}\n\n` +
-          `你可以在不同心情、不同阶段再玩几次，看看会不会跳出不一样的小动物。`;
+          "你可以在不同心情、不同阶段再玩几次，看看会不会跳出不一样的小动物。";
       }
 
-      // 分数展示前 4 名
+      // 分数条：展示前 4 名
       scoreContainer.innerHTML = "";
       const topN = sorted.slice(0, 4);
       const maxScore = topN[0][1] || 1;
